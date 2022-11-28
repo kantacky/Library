@@ -6,7 +6,7 @@
 
 use std::io;
 
-fn quick_sort<T: PartialOrd + Clone>(source: &mut [T], left: usize, right: usize) {
+pub fn quick_sort<T: PartialOrd + Clone>(source: &mut [T], left: usize, right: usize) {
   let pivot: T = source[(left + right) >> 1].clone();
   let mut pl: usize = left;
   let mut pr: usize = right;
